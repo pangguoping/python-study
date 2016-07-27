@@ -1,0 +1,12 @@
+2016-06-07 21:58:51 PM - root - DEBUG -log模块:  debug
+2016-06-07 21:58:51 PM - root - INFO -log模块:  info
+2016-06-07 21:58:51 PM - root - WARNING -log模块:  warning
+2016-06-07 21:58:51 PM - root - ERROR -log模块:  error
+2016-06-07 21:58:51 PM - root - CRITICAL -log模块:  critical
+2016-06-07 21:58:51 PM - root - DEBUG -log模块:  log
+2016-06-07 21:59:38 PM - root - DEBUG -log模块:  debug
+2016-06-07 21:59:38 PM - root - INFO -log模块:  info
+2016-06-07 21:59:38 PM - root - WARNING -log模块:  warning
+2016-06-07 21:59:38 PM - root - ERROR -log模块:  error
+2016-06-07 21:59:38 PM - root - CRITICAL -log模块:  critical
+2016-06-07 21:59:38 PM - root - DEBUG -log模块:  log

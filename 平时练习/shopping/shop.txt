@@ -1,0 +1,5 @@
+mac     10000
+iphone  5000
+tea     400
+coffee  35
+boots   999

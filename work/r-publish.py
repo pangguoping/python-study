@@ -3,8 +3,8 @@
 # auth : pangguoping
 
 import pika
-credentials = pika.PlainCredentials('admin', 'admin')
-connection = pika.BlockingConnection(pika.ConnectionParameters('dev-api-node2',5672,'/',credentials))
+credentials = pika.PlainCredentials('dev', 'ruowei888')
+connection = pika.BlockingConnection(pika.ConnectionParameters('dev-api-node2',56720,'/',credentials))
 channel = connection.channel()
 
 channel.queue_declare(queue='hello2', durable=True)  #队列持久化

@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
 
 
-engine = create_engine("mysql+pymysql://root:123@192.168.11.139:3306/s13", max_overflow=5)
+engine = create_engine("mysql+pymysql://root:123@192.168.29.128:3306/s13", max_overflow=5)
 
 Base = declarative_base()
 #创建单表
@@ -28,6 +28,7 @@ class User(Base):
     username = Column(String(32))
     group_id = Column(Integer,ForeignKey('group.nid'))
     group = relationship("Group",backref='uuu')
+    #这个方法输出什么，对象就获取什么
     def __repr__(self):
         temp = '%s - %s:%s' %(self.nid,self.username,self.group_id)
         return temp
@@ -50,19 +51,34 @@ session = Session()
 # ]
 # )
 # session.commit()
-
+####################################### 单表查询 ############################################
 #只是获取用户
-ret = session.query(User).filter(User.username == 'alex1').all()
+# ret = session.query(User).filter(User.username == 'alex1').all() #这里获取的是对象
+# print(ret)
+# ret = session.query(User).all()
+# obj = ret[0]
+# print(ret)
+# print(obj)
+# print(obj.nid)
+# print(obj.username)
+# print(obj.group_id)
+#######################
+#这里获取的是列表
+ret = session.query(User.username).all()  #这是映射的方式
 print(ret)
-ret = session.query(User).all()
-obj = ret[0]
+
+############################### 多表查询 #######################################
+ret = session.query(User).join(Group).all()   #或者.filter()
+#select * from user left join group on user.group_id = group.nid
 print(ret)
-print(obj)
-print(obj.nid)
-print(obj.username)
-print(obj.group_id)
-
-
+#查看生成的sql
+sql = session.query(User).join(Group)
+print(sql)
+#以left.join查看
+ret = session.query(User).join(Group,isouter=True).all()
+print(ret)
+sql = session.query(User).join(Group,isouter=True)
+print(sql)
 '''
 
 #正向查询

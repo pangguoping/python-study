@@ -46,8 +46,10 @@ session = Session()
 
 #向user表中添加数据
 # session.add_all([
-#     User(username='alex1',group_id=1),
-#     User(username='alex2',group_id=2)
+#     User(username='alex3',group_id=1),
+#     User(username='alex4',group_id=1),
+#     User(username='alex5', group_id=1),
+#     User(username='alex6', group_id=1)
 # ]
 # )
 # session.commit()
@@ -64,27 +66,45 @@ session = Session()
 # print(obj.group_id)
 #######################
 #这里获取的是列表
-ret = session.query(User.username).all()  #这是映射的方式
-print(ret)
+# ret = session.query(User.username).all()  #这是映射的方式
+# print(ret)
 
 ############################### 多表查询 #######################################
-ret = session.query(User).join(Group).all()   #或者.filter()
-#select * from user left join group on user.group_id = group.nid
+# ret = session.query(User).join(Group).all()   #或者.filter()
+# #select * from user left join group on user.group_id = group.nid
+# print(ret)
+# #查看生成的sql
+# sql = session.query(User).join(Group)
+# print(sql)
+# #以left.join查看
+# ret = session.query(User).join(Group,isouter=True).all()
+# print(ret)
+# sql = session.query(User).join(Group,isouter=True)
+# print(sql)
+#
+# #映射方式
+# sql = session.query(User.username,Group.caption).join(Group,isouter=True)
+# print(sql)
+# ret = session.query(User.username,Group.caption).join(Group,isouter=True).all()
+# print(ret)
+
+# ret = session.query(User).all()
+# for obj in ret:
+#     print(obj.nid,obj.username,obj.group,obj.group_id,obj.group.nid,obj.group.caption)
+#out:
+
+ret = session.query(User.username,Group.caption).join(Group,isouter=True).filter(Group.caption == 'DBA').all()
 print(ret)
-#查看生成的sql
-sql = session.query(User).join(Group)
-print(sql)
-#以left.join查看
-ret = session.query(User).join(Group,isouter=True).all()
-print(ret)
-sql = session.query(User).join(Group,isouter=True)
-print(sql)
+#新方式（反向查询）
+obj = session.query(Group).filter(Group.caption == 'DBA').first()
+print(obj.uuu)
 '''
 
 #正向查询
 
 #原始方式:
-ret = session.query(User.username,Group.caption).join(Group,isouter=True).all()
+ret = session.query(User.username,Group.caption).join(Group,i
+souter=True).all()
 print(ret)
 #使用group,relation
 #新式正向查询
@@ -97,8 +117,6 @@ ret = session.query(User.username,Group.caption).join(Group,isouter=True).filter
 print(ret)
 #新式方向查询
 obj = session.query(Group).filter(Group.caption == 'DBA').first()
-print(obj.nid)
-print(obj.caption)
 print(obj.uuu)
 
 '''

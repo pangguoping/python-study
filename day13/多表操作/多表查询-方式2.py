@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
 
 
-engine = create_engine("mysql+pymysql://root:123@192.168.11.139:3306/s13", max_overflow=5)
+engine = create_engine("mysql+pymysql://root:123@192.168.29.128:3306/s13", max_overflow=5)
 
 Base = declarative_base()
 class Host(Base):
@@ -22,13 +22,13 @@ class HostUser(Base):
     __tablename__ = 'host_user'
     nid = Column(Integer,primary_key=True,autoincrement=True)
     username = Column(String(32))
-#创建第一张表和第二张表的关系表
+#创建第一张表和第二张表的关系表192.168.29.128
 class HostToHostUser(Base):
     __tablename__ = 'host_to_host_user'
     nid = Column(Integer,primary_key=True,autoincrement=True)
     host_id = Column(Integer,ForeignKey('host.nid'))
     host_user_id = Column(Integer,ForeignKey('host_user.nid'))
-
+    #relationship
     host = relationship('Host',backref = 'h')
     host_user = relationship('HostUser',backref = 'u')
 
@@ -46,7 +46,7 @@ session = Session()
 # for item in host_obj.h:
 #     print(item.host_user,item.host_user.nid,item.host_user.username)
 
-
+#最后总结为：
 host_obj = session.query(Host).filter(Host.hostname=='c1').first()
 for item in host_obj.h:
 

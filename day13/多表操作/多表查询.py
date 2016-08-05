@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
 
 
-engine = create_engine("mysql+pymysql://root:123@192.168.11.139:3306/s13", max_overflow=5)
+engine = create_engine("mysql+pymysql://root:123@192.168.29.128:3306/s13", max_overflow=5)
 
 Base = declarative_base()
 class Host(Base):
@@ -33,12 +33,14 @@ class HostToHostUser(Base):
 Session = sessionmaker(bind=engine)
 session = Session()
 
-#查询
+#查询主机c1中所有的用户
 #1、旧方式:
 host_obj = session.query(Host).filter(Host.hostname == 'c1').first()
+print(host_obj)
 #host_boj.nid
 #2)、所有用户ID
 host_2_host_user = session.query(HostToHostUser.host_user_id).filter(HostToHostUser.host_id == host_obj.nid).all()
+print(host_2_host_user)
 #print(host_2_host_user)  #输出 [(1,), (2,), (3,)]
 #把列表元祖转换成列表
 r = zip(*host_2_host_user)

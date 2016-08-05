@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
 
 
-engine = create_engine("mysql+pymysql://root:123@192.168.11.139:3306/s13", max_overflow=5)
+engine = create_engine("mysql+pymysql://root:123@192.168.29.128:3306/s13", max_overflow=5)
 
 Base = declarative_base()
 

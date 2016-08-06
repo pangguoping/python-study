@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*-coding=utf-8-*-
-# Auther:ccorz Mail:ccniubi@163.com Blog:http://www.cnblogs.com/ccorz/
-# GitHub:https://github.com/ccorzorz
+
 import os, sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

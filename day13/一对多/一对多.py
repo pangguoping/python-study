@@ -34,7 +34,7 @@ class User(Base):
         return temp
 def init_db():
     Base.metadata.create_all(engine)
-init_db()
+#init_db()
 
 
 Session = sessionmaker(bind=engine)
@@ -43,8 +43,8 @@ session = Session()
 # session.add(Group(caption='dba'))
 # session.add(Group(caption='sa'))
 # session.commit()
-
-#向user表中添加数据
+#
+# #向user表中添加数据
 # session.add_all([
 #     User(username='user1',group_id=1),
 #     User(username='user2',group_id=1),
@@ -55,7 +55,7 @@ session = Session()
 # session.commit()
 ####################################### 单表查询 ############################################
 #只是获取用户
-# ret = session.query(User).filter(User.username == 'alex1').all() #这里获取的是对象
+# ret = session.query(User).filter(User.username == 'user1').all() #这里获取的是对象
 # print(ret)
 # ret = session.query(User).all()
 # obj = ret[0]
@@ -83,10 +83,10 @@ session = Session()
 # print(sql)
 #
 # #映射方式
-# sql = session.query(User.username,Group.caption).join(Group,isouter=True)
-# print(sql)
-# ret = session.query(User.username,Group.caption).join(Group,isouter=True).all()
-# print(ret)
+sql = session.query(User.username,Group.caption).join(Group,isouter=True)
+print(sql)
+ret = session.query(User.username,Group.caption).join(Group,isouter=True).all()
+print(ret)  # [('user1', 'dba'), ('user2', 'dba'), ('user3', 'sa'), ('user4', 'sa')]
 
 # ret = session.query(User).all()
 # for obj in ret:

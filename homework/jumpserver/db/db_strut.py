@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*-coding=utf-8-*-
 
-
-
-
 from sqlalchemy import create_engine, and_, or_, func, Table
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey, UniqueConstraint, DateTime

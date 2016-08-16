@@ -1,0 +1,10 @@
+			.left_navigation{
+				width:200px ;
+				height: 500px;
+				margin: 1px;
+				/*background-color: rgb(229,6,247);*/
+				background: rgb(201, 3, 59);
+				position: fixed;
+				border-top: 1px solid red;
+
+			}

@@ -1,0 +1,200 @@
+
+			.content{
+				
+				height: 1000px;
+    			width: 1000px;
+/*    			vertical-align: middle;*/
+/*    			border: 0;*/
+				margin: 1px;
+				/*background-image: url('1.jpg');*/
+				/*background-color: red;*/
+				position: relative;
+				left:200px ;
+				top: 1px;
+			}
+			.son_left{
+				/*background-color: blue;*/
+				width: 1000px;
+				height: 50px;
+				font-size: 15px;
+				font-family: "楷体";
+				font-weight: bold;
+			}
+			.son_son_top{
+				width: 1000px;
+				height: 200px;
+				border-top: solid red;
+				/*border-style: solid;*/
+				border-left: 1px solid rgba(192,192,192,0.8) ;
+				/*border-left-color:rgba(192,192,192,0.8) ;*/
+				/*border-bottom: 1px, ;*/
+				/*border-bottom-color: rgba(192,192,192,0.8);*/
+				border-right: 0px;
+				font-size: 15px;
+				font-family: "楷体";
+				font-weight: bold;
+				/*background-color: deepskyblue;*/
+			}
+			.son_son_center{
+				width: 1000px;
+				height: 50px;
+				background-color: white;
+			}
+			.son_son_center .son_son_center_a1{
+				width: 400px;
+				height: 50px;
+				/*background-color: blue;*/
+				border-top: 1px solid rgba(192,192,192,0.8);
+				float: left;
+			}
+			.son_son_center .son_son_center_a2{
+				width: 100px;
+				height: 50px;
+				/*background-color: red;*/
+				border-left: 1px solid rgba(192,192,192,0.8);
+				border-right: 1px solid rgba(192,192,192,0.8);
+				border-bottom: 1px solid rgba(192,192,192,0.8);
+				line-height: 50px;
+				text-align: center;
+				float: left;
+			}
+			.son_son_center .son_son_center_a3{
+				width: 497px;
+				height: 50px;
+				/*background-color: blue;*/
+				border-top: 1px solid rgba(192,192,192,0.8);
+				float: left;
+			}
+			.p1{
+				a:link{color: red;}
+			}
+			.sort{
+				width: 1000px;
+				height: 50px;
+				font-size: 15px;
+				font-family: "楷体";
+				font-weight: bold;
+				margin: 10px;
+				
+			}
+			a:hover{
+				color: yellowgreen;
+			}
+			.gif{
+				font-size: 15px;
+				font-family: "楷体";
+				font-weight: bold;	
+				list-style-image: url("img/bottom.png");
+				float: left;
+				/*background-image: url("bottom.png");
+				background-position: left;
+				background-repeat: no-repeat;*/
+				
+			}
+			/*.gif_top{
+				font-size: 15px;
+				font-family: "楷体";
+				font-weight: bold;	
+				list-style-image: url("top.png");
+				float: left;
+			}*/
+			.img_test{
+				background-image: url("img/top.png");
+			}
+			.sort_sort{
+				width: auto;
+				height: 50px;
+			}
+			.shop_shop{
+				width: auto;
+				height: 750px;
+				
+			}
+			.shop_a{
+				width: auto;
+				height: 250px;
+				background-image: url("img/shop.png");
+				background-repeat: no-repeat;
+				
+			}
+			.shop_b{
+				width: auto;
+				height: 250px;
+				background-image: url("img/shop.png");
+				background-repeat: no-repeat;
+				position: absolute;
+				left: 250px;
+				top: 10px;
+			}
+			.shop_c{
+				width: auto;
+				height: 250px;
+				background-image: url("img/shop.png");
+				background-repeat: no-repeat;
+				
+			}
+			.shop_d{
+				width: auto;
+				height: 250px;
+				background-image: url("img/shop.png");
+				background-repeat: no-repeat;
+				
+			}
+			.shop_e{
+				width: auto;
+				height: 250px;
+				background-image: url("img/shop.png");
+				background-repeat: no-repeat;
+				
+			}
+			.content_body_module1{
+				width: 1000px;
+				height: 259px;
+				margin: 0;
+				padding: 0;
+				border-top: 1px solid ;
+				
+			}
+			.content_body_module1 ul{ margin: 0; padding: 0;}
+			.ul_a{
+				list-style: none;
+				list-style-image: url("img/shop.png");
+				
+				padding: 0 6px;
+				list-style-position: inside;
+				float: left;
+			}
+			.content_body_module2{
+				width: 1000px;
+				height: 259px;
+				margin: 0;
+				padding: 0;
+				border-top: 1px solid ;
+				
+			}
+			.content_body_module2 ul{ margin: 0; padding: 0;}
+			.ul_a{
+				list-style: none;
+				list-style-image: url("img/shop.png");
+				
+				padding: 0 6px;
+				list-style-position: inside;
+				float: left;
+			}
+			.content_body_module3{
+				width: 1000px;
+				height: 259px;
+				margin: 0;
+				padding: 0;
+				border-top: 1px solid ;
+				
+			}
+			.content_body_module3 ul{ margin: 0; padding: 0;}
+			.ul_a{
+				list-style: none;
+				list-style-image: url("img/shop.png");
+				
+				padding: 0 6px;
+				list-style-position: inside;
+				float: left;
+			}

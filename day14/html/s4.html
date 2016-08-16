@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://192.168.11.88:8000/index/" method="post" enctype="multipart/form-data">
+        <input type="text" name="user"/>
+        <input type="password" name="pwd" />
+        男<input type="radio" name="gender" value="1" />
+        女<input type="radio" name="gender" value="0" />
+        <p>爱好:
+            篮球<input name="favor" type="checkbox" value="1" />
+            足球<input name="favor" type="checkbox" value="2" />
+            狗球球<input name="favor" type="checkbox" value="3" />
+            二球<input name="favor" type="checkbox" value="4" />
+        </p>
+        <p>
+            <select name="city">
+                <option value="1">上海</option>
+                <option value="2">北京</option>
+                <option value="3">广州</option>
+
+            </select>
+        </p>
+         <p>备注:<textarea></textarea></p>
+
+            <input type="submit" value="submit"/>
+            <input type="button" value="button"/>
+            <input type="reset" value="reseet"/>
+    </form>
+
+</body>
+</html>

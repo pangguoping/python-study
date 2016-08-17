@@ -1,0 +1,114 @@
+			
+			
+			body{
+				margin: 0;
+			}
+			
+		/*----------------------------------*/	
+			.title{
+				background-color: white;
+				width: auto;
+				height: 190px;
+				margin: 0;
+			}
+			.title .title_top_login{
+				width:auto;
+				height: 40px;
+				background-color: rgb(200, 200, 200);
+				margin: 0;
+			}
+			.title .title_top_login ul{
+				list-style-type: none;
+				margin: 0;
+			}
+			.title .title_top_login	a{
+				text-decoration: none;
+				
+			}		
+			.title .title_top_login li{
+				float: right;
+				line-height: 40px;
+				padding:0 20px;
+				
+			}	
+			.title .title_top_login	li:hover{
+				background-color: #000000;
+				line-height: 40px;
+				color: yellow;
+			}
+/*----------------------------------------*/
+
+
+
+
+.title_top_input{
+	width: auto;
+	height: 100px;
+	background-color: white;
+	border: 1px solid;
+}
+.title_top_input_img{
+	width: 168px;
+	height: 80px;
+	background-color: red;
+	position: absolute;
+	left: 110px;
+	top: 51px;
+	background-image: url("img/show_ganen.png");
+}
+.title_top_input_input .input_input{
+	height: 27px;
+	width: 300px;
+	position: absolute;
+	left: 600px;
+	top: 60px;
+}
+.title_top_input_input .search_img{
+	width: 64px;
+	height: 36px;
+	position: absolute;
+	left: 903px;
+	top: 59px;
+	background-image: url("img/search.png");
+}
+.title_top_input_input .resou{
+	position: absolute;
+	left: 600px;
+	top: 101px;
+}
+/*-----------------------------------*/
+.title_top_input .title_top_input_shopcar{
+	width: 142px;
+	height: 36px;
+	background-color: #ededed;
+	position: absolute;
+	right: 100px;
+	top: 60px;
+	line-height: 36px;
+	
+}
+.title .title_top_hengtiao{
+	width: auto;
+	height: 49px;
+	background-color: rgb(201, 3, 59);
+}
+.title_top_hengtiao_center{
+	width: 650px;
+	height: 49px;
+	margin: 0;
+	/*background-color: red;*/
+	position: absolute;
+	left: 171px;
+}
+.title_top_hengtiao_center ul{
+	margin: 0;
+	list-style-type: none;
+	line-height: 49px;
+	
+	
+}
+.title_top_hengtiao_center ul li a{
+	text-decoration: none;
+	float: left;
+	padding: 0 20px;
+}

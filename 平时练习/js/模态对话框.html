@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模态对话框</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .shadow{
+            background-color: #000;
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left:0px;
+            right: 0px;
+            z-index: 5;
+            opacity: 0.5;
+        }
+        .register-form{
+            width: 400px;
+            height: 300px;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -150px;
+            z-index: 10; /*确保modal一定在shadow上边*/
+            border: 1px solid #333333;
+            background-color: #FFFFFF;
+            font-family: "Microsoft JhengHei";
+        }
+        .register-title{
+            margin: 15px 15px;
+            line-height: 25px;
+            padding-top: 0px;
+            padding-left: 15px;
+        }
+        .register-detail{
+            margin-top: 15px;
+            margin-left: 25px;
+            line-height: 35px;
+        }
+        .btn-class{
+            margin: 35px 50px;
+            display: block;
+        }
+    </style>
+</head>
+<body style="height: 3000px;">
+    <button type="button" onclick="myfunc()">点击这里</button>
+    <div id="w" class="hide">
+        <div class="shadow"></div>
+        <div class="register-form">
+            <div style="border-bottom: 1px solid #9a9a9a">
+                <h4 class="register-title">用户注册</h4>
+            </div>
+            <div class="register-detail">
+                <form action="#">
+                    <label for="username">用户名</label>
+                    <input id="username" type="text"/>
+                    <br />
+                    <label for="pwd" style="margin-right: 16px;">密码</label>
+                    <input id="pwd" type="text" />
+                    <br />
+                    <label for="province" style="margin-right: 16px;">籍贯</label>
+                    <select name="province" id="province">
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">邯郸</option>
+                        <option value="3">河北</option>
+
+                    </select>
+                    <br />
+                    <span class="btn-class">
+                        <input type="reset" value="重置" />
+                        <input type="submit" value="提交" />
+                        <input type="button" value="取消" onclick="cancle()">
+
+                    </span>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+    <script>
+        function myfunc() {
+            $("#w").show();
+        }
+        function cancle() {
+            $("#w").hide();
+        }
+    </script>
+</body>
+</html>

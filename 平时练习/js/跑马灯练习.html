@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="i1" style="display: inline-block;background-color: green;color: white;font-size: 20px">欢迎老男孩莅临指导</div>
+
+    <script>
+        setInterval("f1()",1000);
+        function f1() {
+            //js获取某一个标签id=i1
+            var tag = document.getElementById('i1');
+            //获取标签的内容
+            var text = tag.innerText;
+
+            var a = text.charAt(0);
+            var sub = text.substring(1,text.length);
+
+            var new_str = sub + a;
+            tag.innerText = new_str;
+
+        }
+    </script>
+
+</body>
+</html>

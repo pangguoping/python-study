@@ -10,9 +10,9 @@
     <script type="text/javascript">
         function Focus() {
             //获取标签，清空
-            var tag = document.getElementById('i1');
+            var tag = document.getElementById('i1');  //获取标签
             if(tag.value == "请输入关键字") {
-                tag.value = "";
+                tag.value = "";  //设置内容，即清空
             }
 
         }
@@ -20,7 +20,7 @@
             //
             var tag = document.getElementById('i1');
             var val = tag.value;
-            if(val.trim().length == 0) {
+            if(val.trim().length == 0) {    //判断输入内容是否为空
                 tag.value = "请输入关键字"
             }
 

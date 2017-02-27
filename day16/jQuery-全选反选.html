@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="全选" onclick="CheckAll()" />
+    <input type="button" value="取消" onclick="CancleAll()" />
+    <input type="button" value="反选" onclick="ReverseAll()" />
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>用户名</th>
+                <th>密码</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+            <tr>
+                <td><input type="checkbox" id="test"/></td>
+                <td>2</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="test"/></td>
+                <td>3</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="test"/></td>
+                <td>4</td>
+                <td>44</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        function CheckAll() {
+
+            $('#tb input[type="checkbox"]').prop('checked',true);
+        }
+        function CancleAll() {
+            $('#tb input[type="checkbox"]').prop('checked',false);
+
+        }
+        function ReverseAll() {
+            $('#tb input[type="checkbox"]').each(function (i) {
+                //this 当前标签
+                //$(this)  当前标签的jQuery对象
+                if($(this).prop('checked')){
+                    $(this).prop('checked',false);
+                }else{
+                    $(this).prop('checked',true);
+                }
+
+            });
+        }
+
+    </script>
+</body>
+</html>

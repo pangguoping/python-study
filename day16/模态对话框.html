@@ -56,6 +56,11 @@
             t2.classList.add('hide');
 
         }
+
+        window.onkeydown = function (event) {
+            if(event.keyCode == 27)
+                    HideModal();
+        }
     </script>
 
 </body>

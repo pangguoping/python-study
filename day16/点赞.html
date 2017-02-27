@@ -26,16 +26,16 @@
             var left = 71;
             var op = 1;
             var fontSize = 18;
-            var tag = document.createElement('span');
+            var tag = document.createElement('span');  //创建标签
             tag.innerText = '+1';
             tag.style.position = 'absolute';
             tag.style.top = top + 'px';
             tag.style.left = left + 'px';
             tag.style.opacity = op;
             tag.style.fontSize = fontSize + 'px';
-            ths.parentElement.appendChild(tag);
+            ths.parentElement.appendChild(tag);   //把 +1 添加到 “赞”标签的里面
 
-            var interval = setInterval(function () {
+            var interval = setInterval(function () {    //创建定时器
                 top -= 10;
                 left += 10;
                 fontSize += 5;
@@ -46,8 +46,8 @@
                 tag.style.opacity = op;
                 tag.style.fontSize = fontSize + 'px';
                 if(op <= 0.2){
-                    clearInterval(interval);
-                    ths.parentElement.removeChild(tag);
+                    clearInterval(interval);    //删除定时器
+                    ths.parentElement.removeChild(tag);    //删除子标签
                 }
             },50)
 

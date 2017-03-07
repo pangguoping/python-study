@@ -77,7 +77,7 @@
 
         $(function() {
             //当文档树加载完毕后，自动执行
-             $('.item.title').click(function() {
+             $('.item .title').click(function() {
             $(this).next().removeClass('hide');
             $(this).parent().siblings().find('.body').addClass('hide');
         });
